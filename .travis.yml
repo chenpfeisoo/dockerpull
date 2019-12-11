@@ -1,8 +1,9 @@
 services:
   - docker
+  - ["--insecure-registry=http://183.237.235.178:10000"]
 before_install:
 - docker pull registry:latest
-- "sudo cat /etc/docker/daemon.json | jq '. + {\"insecure-registries\": [\"183.237.235.178:10000\"]}' | sudo tee /etc/docker/daemon.json"
+
 script:
 - docker login -u chenpengfei  -p  pass4W0rd@  http://183.237.235.178:10000
 - docker tag registry:latest  183.237.235.178:10000/cfss/registry:test
