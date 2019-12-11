@@ -2,16 +2,9 @@ services:
   - docker
 
 before_install:
-- docker pull docker.elastic.co/eck/eck-operator:1.0.0-beta1
-- docker pull docker.elastic.co/elasticsearch/elasticsearch:7.4.2
-- docker pull docker.elastic.co/kibana/kibana:7.4.2
+- docker pull registry:latest
 
- 
 script:
-- docker login -u chenpengfei -p 1107100226fly
-- docker tag docker.elastic.co/eck/eck-operator:1.0.0-beta1  chenpengfei/eck-operator:1.0.0-beta1
-- docker tag docker.elastic.co/elasticsearch/elasticsearch:7.4.2  chenpengfei/elasticsearch:7.4.2
-- docker tag docker.elastic.co/kibana/kibana:7.4.2   chenpengfei/kibana:7.4.2
-- docker push  chenpengfei/eck-operator:1.0.0-beta1
-- docker push  chenpengfei/elasticsearch:7.4.2
-- docker push  chenpengfei/kibana:7.4.2
+- docker login -u chenpengfei  -p  pass4W0rd@  http://183.237.235.178:10000
+- docker tag registry:latest  183.237.235.178:10000/cfss/registry:test
+- docker push  183.237.235.178:10000/cfss/registry:test
