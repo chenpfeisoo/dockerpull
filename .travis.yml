@@ -1,9 +1,16 @@
 services:
   - docker
 before_install:
-- docker pull registry:latest
+- docker pull docker.elastic.co/eck/eck-operator:1.0.0-beta1
+- docker pull docker.elastic.co/elasticsearch/elasticsearch:7.4.2
+- docker pull docker.elastic.co/kibana/kibana:7.4.2
 
 script:
 - docker login --username=chenpengfei1102 -p 1107100226fly registry.cn-hangzhou.aliyuncs.com
-- docker tag registry:latest  registry.cn-hangzhou.aliyuncs.com/myspaces/registry:123
-- docker push  registry.cn-hangzhou.aliyuncs.com/myspaces/registry:123
+- docker tag docker.elastic.co/eck/eck-operator:1.0.0-beta1  registry.cn-hangzhou.aliyuncs.com/myspaces/eck-operator:1.0.0-beta1
+- docker tag docker.elastic.co/elasticsearch/elasticsearch:7.4.2  registry.cn-hangzhou.aliyuncs.com/myspaces/elasticsearch:7.4.2
+- docker tag docker.elastic.co/kibana/kibana:7.4.2   registry.cn-hangzhou.aliyuncs.com/myspaces/kibana:7.4.2
+- docker push  registry.cn-hangzhou.aliyuncs.com/myspaces/eck-operator:1.0.0-beta1
+- docker push  registry.cn-hangzhou.aliyuncs.com/myspaces/elasticsearch:7.4.2
+- docker push  registry.cn-hangzhou.aliyuncs.com/myspaces/kibana:7.4.2
+
