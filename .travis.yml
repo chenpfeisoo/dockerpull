@@ -1,11 +1,9 @@
 services:
   - docker
-  - ["--insecure-registry=http://183.237.235.178:10000"]
 before_install:
 - docker pull registry:latest
 
 script:
-- docker login -u chenpengfei  -p  pass4W0rd@  http://183.237.235.178:10000
-- docker tag registry:latest  183.237.235.178:10000/cfss/registry:test
-- docker push  183.237.235.178:10000/cfss/registry:test
-
+- docker login --username=chenpengfei1102 -p 1107100226fly registry.cn-hangzhou.aliyuncs.com
+- docker tag registry:latest  registry.cn-hangzhou.aliyuncs.com/myspaces/cfss:123
+- docker push  registry.cn-hangzhou.aliyuncs.com/myspaces/cfss:123
