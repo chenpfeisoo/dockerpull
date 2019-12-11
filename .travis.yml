@@ -9,9 +9,9 @@ before_install:
  
 script:
 - docker login -u chenpengfei -p 1107100226fly
-- docker tag docker.elastic.co/eck/eck-operator:1.0.0-beta1   docker.elastic.co/chenpengfei/eck/eck-operator:1.0.0-beta1
-- docker tag docker.elastic.co/elasticsearch/elasticsearch:7.4.2  docker.elastic.co/chenpengfei/elasticsearch/elasticsearch:7.4.2
-- docker tag docker.elastic.co/kibana/kibana:7.4.2   docker.elastic.co/chenpengfei/kibana/kibana:7.4.2
-- docker push  docker.elastic.co/chenpengfei/eck/eck-operator:1.0.0-beta1
-- docker push  docker.elastic.co/chenpengfei/elasticsearch/elasticsearch:7.4.2
-- docker push  docker.elastic.co/chenpengfei/kibana/kibana:7.4.2
+- docker tag docker.elastic.co/eck/eck-operator:1.0.0-beta1  chenpengfei/eck/eck-operator:1.0.0-beta1
+- docker tag docker.elastic.co/elasticsearch/elasticsearch:7.4.2  chenpengfei/elasticsearch/elasticsearch:7.4.2
+- docker tag docker.elastic.co/kibana/kibana:7.4.2   chenpengfei/kibana/kibana:7.4.2
+- docker push  chenpengfei/eck/eck-operator:1.0.0-beta1
+- docker push  chenpengfei/elasticsearch/elasticsearch:7.4.2
+- docker push  chenpengfei/kibana/kibana:7.4.2
