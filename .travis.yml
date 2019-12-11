@@ -6,4 +6,4 @@ before_install:
 script:
 - docker login --username=chenpengfei1102 -p 1107100226fly registry.cn-hangzhou.aliyuncs.com
 - docker tag registry:latest  registry.cn-hangzhou.aliyuncs.com/myspaces/registry:123
-- docker push  registry.cn-hangzhou.aliyuncs.com/myspaces/cfss:123
+- docker push  registry.cn-hangzhou.aliyuncs.com/myspaces/registry:123
