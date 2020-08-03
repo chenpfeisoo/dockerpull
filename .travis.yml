@@ -5,7 +5,7 @@ before_install:
 - docker pull  nginx
 
 script:
-- echo "${passwd}" | docker login -u ${username} --password-stdin registry.cn-hangzhou.aliyuncs.com
-- docker tag k8s.gcr.io/debian-base-amd64:v1.0.0  registry.cn-hangzhou.aliyuncs.com/myspaces/debian-base-amd64:v1.0.0
-- docker push  registry.cn-hangzhou.aliyuncs.com/myspaces/debian-base-amd64:v1.0.0
+- docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD registry.cn-hangzhou.aliyuncs.com
+- docker tag nginx  registry.cn-hangzhou.aliyuncs.com/myspaces/nginx
+- docker push  registry.cn-hangzhou.aliyuncs.com/myspaces/nginx
 
