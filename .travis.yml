@@ -4,8 +4,8 @@ before_install:
 - docker pull  k8s.gcr.io/debian-base-amd64:v1.0.0
 
 script:
-- docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD registry.cn-hangzhou.aliyuncs.com
-- docker tag k8s.gcr.io/debian-base-amd64:v1.0.0  registry.cn-hangzhou.aliyuncs.com/myspaces/debian-base-amd64:v1.0.0
-- docker push  registry.cn-hangzhou.aliyuncs.com/myspaces/debian-base-amd64:v1.0.0
-
+#- docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD registry.cn-hangzhou.aliyuncs.com
+- docker login -u $DOCKER_USERNAME_DOCKERHUB -p $DOCKER_PASSWORD_DOCKERHUB
+- docker tag k8s.gcr.io/debian-base-amd64:v1.0.0  chenpengfei/debian-base-amd64:v1.0.0
+- docker push  chenpengfei/debian-base-amd64:v1.0.0
 
