@@ -1,7 +1,8 @@
 services:
   - docker
 before_install:
-- docker pull  k8s.gcr.io/debian-base-amd64:v1.0.0
+#- docker pull  k8s.gcr.io/debian-base-amd64:v1.0.0
+- docker pull  nginx
 
 script:
 - docker login --username=${username} -p ${passwd} registry.cn-hangzhou.aliyuncs.com
