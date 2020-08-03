@@ -6,7 +6,7 @@ before_install:
 
 script:
 - echo ${username} ${passwd}
-- docker login --username=${username} -p ${passwd} registry.cn-hangzhou.aliyuncs.com
+- docker login -u ${username} -p ${passwd} registry.cn-hangzhou.aliyuncs.com
 - docker tag k8s.gcr.io/debian-base-amd64:v1.0.0  registry.cn-hangzhou.aliyuncs.com/myspaces/debian-base-amd64:v1.0.0
 - docker push  registry.cn-hangzhou.aliyuncs.com/myspaces/debian-base-amd64:v1.0.0
 
