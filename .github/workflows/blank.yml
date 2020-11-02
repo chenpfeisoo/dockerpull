@@ -32,3 +32,4 @@ jobs:
           export ENV="test"
           echo $ENV
           echo $SECRETS
+          echo $name
