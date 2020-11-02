@@ -31,5 +31,5 @@ jobs:
         run: |
           export ENV="test"
           echo $ENV
-          echo $SECRETS
-          echo $name
+          echo ${{ secrets.name }}
+           echo ${{ secrets.secrets }}
