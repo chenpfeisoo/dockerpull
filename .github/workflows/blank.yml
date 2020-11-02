@@ -31,4 +31,4 @@ jobs:
         run: |
           export ENV="test"
           echo $ENV
-          echo $Secret
+          echo $SECRETS
